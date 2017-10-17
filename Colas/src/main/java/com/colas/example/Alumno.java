@@ -1,6 +1,7 @@
 package com.colas.example;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 public class Alumno implements Serializable {
 	
@@ -10,6 +11,11 @@ public class Alumno implements Serializable {
 	private String apellidos;
 	private String estadoCivil;
 
+	public Alumno() {
+		Optional<Alumno> al = Optional.ofNullable(new Alumno());
+	}
+	
+	
 	public Integer getIdAlumno() {
 		return idAlumno;
 	}
